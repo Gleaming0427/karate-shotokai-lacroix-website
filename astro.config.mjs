@@ -4,8 +4,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  base: process.env.BASE_URL || '/',
-  site: 'https://gleaming0427.github.io',
+  site: 'https://karate-shotokai-lacroix.netlify.app',
   output: 'static',
   integrations: [sitemap()],
 });

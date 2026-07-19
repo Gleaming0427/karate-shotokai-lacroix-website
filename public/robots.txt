@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gleaming0427.github.io/karate-shotokai-lacroix-website/sitemap-index.xml
+Sitemap: /sitemap-index.xml

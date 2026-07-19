@@ -1,7 +1,5 @@
 ---
-const b = import.meta.env.BASE_URL;
-const base = b === "/" ? "" : b;
-const kataImg = `${base}/images/iaijutsu-kata.webp`;
+const kataImg = `/images/iaijutsu-kata.webp`;
 ---
 
 <section class="section" id="iaijutsu">
@@ -19,7 +17,7 @@ const kataImg = `${base}/images/iaijutsu-kata.webp`;
     </div>
 
     <figure class="figure">
-      <img src={kataImg} alt="Pratique d'un kata" loading="lazy" />
+      <img src="/images/iaijutsu-kata.webp" alt="Pratique d'un kata" loading="lazy" />
       <figcaption>Pratique d'un kata</figcaption>
     </figure>
   </div>

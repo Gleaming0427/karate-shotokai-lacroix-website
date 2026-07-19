@@ -1,7 +1,5 @@
 ---
-const b = import.meta.env.BASE_URL;
-const base = b === "/" ? "" : b;
-const serignanImg = `${base}/images/serignan-2026.webp`;
+const serignanImg = `/images/serignan-2026.webp`;
 ---
 
 <section class="section" id="evenements">
@@ -11,7 +9,7 @@ const serignanImg = `${base}/images/serignan-2026.webp`;
     <div class="events-scroll">
       <!-- Stage Sérignan -->
       <article class="event-card" id="event-serignan" style="cursor: pointer;">
-        <img src={serignanImg} alt="Stage Sérignan 2026" loading="lazy" />
+        <img src="/images/serignan-2026.webp" alt="Stage Sérignan 2026" loading="lazy" />
         <div class="event-card-body">
           <span class="event-tag">Stage national</span>
           <h3>Stage à Sérignan</h3>
@@ -27,7 +25,7 @@ const serignanImg = `${base}/images/serignan-2026.webp`;
 <div class="modal-overlay" id="modal-overlay">
   <div class="modal-content">
     <button class="modal-close" id="modal-close">&times;</button>
-    <img data-src={serignanImg} alt="Stage Sérignan 2026" id="modal-img" />
+    <img data-src="/images/serignan-2026.webp" alt="Stage Sérignan 2026" id="modal-img" />
   </div>
 </div>
 

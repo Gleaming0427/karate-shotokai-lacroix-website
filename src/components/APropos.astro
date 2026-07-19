@@ -1,8 +1,6 @@
 ---
-const b = import.meta.env.BASE_URL;
-const base = b === "/" ? "" : b;
-const logoImg = `${base}/images/logo.webp`;
-const fekamtLogo = `${base}/images/logo-fekamt.webp`;
+const logoImg = `/images/logo.webp`;
+const fekamtLogo = `/images/logo-fekamt.webp`;
 ---
 
 <section class="section" id="a-propos">
@@ -18,12 +16,12 @@ const fekamtLogo = `${base}/images/logo-fekamt.webp`;
 
       <div class="affiliations">
         <a href="https://shotokaieurope.org/" target="_blank" rel="noopener" class="affiliation-item">
-          <img src={logoImg} alt="Logo" class="affiliation-logo affiliation-logo-round" loading="lazy" />
+          <img src="/images/logo.webp" alt="Logo" class="affiliation-logo affiliation-logo-round" loading="lazy" />
           <strong>KDSE</strong>
           <span>Karaté-do Shotokaï Europe</span>
         </a>
         <a href="https://fekamt.com/" target="_blank" rel="noopener" class="affiliation-item">
-          <img src={fekamtLogo} alt="Logo FEKAMT" class="affiliation-logo affiliation-logo-round" loading="lazy" />
+          <img src="/images/logo-fekamt.webp" alt="Logo FEKAMT" class="affiliation-logo affiliation-logo-round" loading="lazy" />
           <strong>FEKAMT</strong>
           <span>Fédération Européenne de Karaté<br/>et Arts Martiaux Traditionnels</span>
         </a>

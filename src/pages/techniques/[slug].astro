@@ -54,7 +54,11 @@ const { title, date, image } = article.data;
           </time>
           {image && <img src={image} alt={title} class="article-hero" />}
           <div class="prose article-body">
-            {article.body.split('\n').map(p => p.trim() && <p>{p}</p>)}
+            {article.body
+              .replace(/!\[.*?\]\(.*?\)/g, '')
+              .split('\n')
+              .filter(p => p.trim() && !p.trim().startsWith('!['))
+              .map(p => <p>{p.trim()}</p>)}
           </div>
         </div>
       </article>

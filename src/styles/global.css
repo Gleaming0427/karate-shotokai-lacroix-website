@@ -138,8 +138,8 @@ a:hover { color: var(--color-accent-hover); }
 
 .nav-toggle {
   display: none; background: none; border: none;
-  color: var(--color-text); font-size: 1.5rem; cursor: pointer;
-  padding: .4rem; margin-left: auto; line-height: 1;
+  color: var(--color-text); font-size: 1.8rem; cursor: pointer;
+  padding: .5rem; margin-left: auto; line-height: 1;
 }
 
 /* ── Hero ── */
@@ -452,19 +452,23 @@ a:hover { color: var(--color-accent-hover); }
    RESPONSIVE
    ═══════════════════════════════════════ */
 
-/* Tablette — header plus compact */
+/* Tablette */
 @media (max-width: 900px) {
-  .header-inner { padding: .45rem clamp(.75rem, 2.5vw, 1.5rem); }
-  .nav-links { gap: clamp(.8rem, 2vw, 1.6rem); }
-  .nav-links a { font-size: .7rem; letter-spacing: .03em; }
-  .header-logo-img { width: 36px; height: 36px; }
-  .header-logo span { font-size: .64rem; }
+  .header-inner { padding: .55rem clamp(1rem, 2.5vw, 1.5rem); }
+  .nav-links { gap: clamp(1rem, 2vw, 1.6rem); }
+  .nav-links a { font-size: .74rem; letter-spacing: .04em; }
+  .header-logo-img { width: 40px; height: 40px; }
+  .header-logo span { font-size: .7rem; }
+  .nav-toggle { font-size: 2rem; padding: .5rem; }
 }
 
 /* Mobile */
 @media (max-width: 768px) {
   .container,
   .container-wide { padding: 0 1.25rem; }
+
+  .header-logo-img { width: 40px; height: 40px; }
+  .header-logo span { font-size: .7rem; }
 
   .hero { padding: 4.5rem 1.25rem 3rem; }
 
@@ -494,12 +498,12 @@ a:hover { color: var(--color-accent-hover); }
   .nav-links.open { display: flex; }
 
   .nav-links a {
-    display: block; padding: .7rem .5rem; font-size: .9rem;
+    display: block; padding: .85rem .5rem; font-size: .95rem;
     border-bottom: 1px solid var(--color-border);
   }
   .nav-links li:last-child a { border-bottom: none; }
   .nav-links a.active::after { display: none; }
-  .nav-toggle { display: block; }
+  .nav-toggle { display: block; font-size: 2rem; padding: .5rem; }
 
   /* Tableau scroll */
   .schedule-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }

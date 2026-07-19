@@ -1,11 +1,18 @@
 ---
-// Header.astro
+const b = import.meta.env.BASE_URL;
+const base = b === "/" ? "" : b;
+const urlHero = `${base}/#hero`;
+const urlKarate = `${base}/#karate`;
+const urlIaijutsu = `${base}/#iaijutsu`;
+const urlHoraires = `${base}/#horaires`;
+const urlContact = `${base}/#contact`;
+const urlTechniques = `${base}/techniques/`;
 ---
 
 <header class="site-header" id="header">
   <div class="header-inner">
-    <a href="#hero" class="header-logo" aria-label="Accueil — Karaté Shotokaï &amp; Iaijutsu Lacroix Falgarde">
-      <div class="header-logo-img" role="img" aria-label="Karaté Shotokaï &amp; Iaijutsu Lacroix Falgarde" style="background-image: url(/images/logo.jpg)"></div>
+    <a href={urlHero} class="header-logo" aria-label="Accueil — Karaté Shotokaï &amp; Iaijutsu Lacroix Falgarde">
+      <div class="header-logo-img" role="img" aria-label="Karaté Shotokaï &amp; Iaijutsu Lacroix Falgarde"></div>
       <span>Karaté Shotokaï &amp; Iaijutsu<br/>Lacroix Falgarde</span>
     </a>
 
@@ -13,12 +20,12 @@
 
     <nav>
       <ul class="nav-links" id="nav-links">
-        <li><a href="/#hero">Accueil</a></li>
-        <li><a href="/#karate">Karaté Shotokaï</a></li>
-        <li><a href="/#iaijutsu">Iaijutsu</a></li>
-        <li><a href="/techniques/">Techniques</a></li>
-        <li><a href="/#horaires">Horaires &amp; Tarifs</a></li>
-        <li><a href="/#contact">Contacts</a></li>
+        <li><a href={urlHero}>Accueil</a></li>
+        <li><a href={urlKarate}>Karaté Shotokaï</a></li>
+        <li><a href={urlIaijutsu}>Iaijutsu</a></li>
+        <li><a href={urlTechniques}>Techniques</a></li>
+        <li><a href={urlHoraires}>Horaires &amp; Tarifs</a></li>
+        <li><a href={urlContact}>Contacts</a></li>
       </ul>
     </nav>
   </div>
@@ -44,7 +51,7 @@
         const id = entry.target.getAttribute('id');
         links.forEach(link => {
           const href = link.getAttribute('href') || '';
-          link.classList.toggle('active', href === '#' + id || href === '/#' + id);
+          link.classList.toggle('active', href === '#' + id || href.endsWith('/#' + id));
         });
       }
     });

@@ -1,5 +1,7 @@
 ---
-// Evenements.astro
+const b = import.meta.env.BASE_URL;
+const base = b === "/" ? "" : b;
+const serignanImg = `${base}/images/serignan-2026.jpg`;
 ---
 
 <section class="section" id="evenements">
@@ -9,7 +11,7 @@
     <div class="events-scroll">
       <!-- Stage Sérignan -->
       <article class="event-card" id="event-serignan" style="cursor: pointer;">
-        <img src="/images/serignan-2026.jpg" alt="Stage Sérignan 2026" loading="lazy" />
+        <img src={serignanImg} alt="Stage Sérignan 2026" loading="lazy" />
         <div class="event-card-body">
           <span class="event-tag">Stage national</span>
           <h3>Stage à Sérignan</h3>
@@ -25,7 +27,7 @@
 <div class="modal-overlay" id="modal-overlay">
   <div class="modal-content">
     <button class="modal-close" id="modal-close">&times;</button>
-    <img src="/images/serignan-2026.jpg" alt="Stage Sérignan 2026" id="modal-img" />
+    <img src={serignanImg} alt="Stage Sérignan 2026" id="modal-img" />
   </div>
 </div>
 

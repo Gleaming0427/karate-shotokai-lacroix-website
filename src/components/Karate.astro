@@ -1,5 +1,9 @@
 ---
-// Karate.astro
+const b = import.meta.env.BASE_URL;
+const base = b === "/" ? "" : b;
+const denisImg = `${base}/images/denis-karate.jpg`;
+const murakamiImg = `${base}/images/murakami.jpg`;
+const herbertImg = `${base}/images/patrick-herbert.jpg`;
 ---
 
 <section class="section section-alt" id="karate">
@@ -13,7 +17,7 @@
     </div>
 
     <figure class="figure">
-      <img src="/images/denis-karate.jpg" alt="Sensei Denis Le Goff avec ses élèves" loading="lazy" />
+      <img src={denisImg} alt="Sensei Denis Le Goff avec ses élèves" loading="lazy" />
       <figcaption>Sensei Denis Le Goff</figcaption>
     </figure>
 
@@ -23,11 +27,11 @@
 
     <div class="masters-row">
       <figure>
-        <img src="/images/murakami.jpg" alt="Maître Tetsuji Murakami" loading="lazy" />
+        <img src={murakamiImg} alt="Maître Tetsuji Murakami" loading="lazy" />
         <figcaption>Maître Tetsuji Murakami</figcaption>
       </figure>
       <figure>
-        <img src="/images/patrick-herbert.jpg" alt="Sensei Patrick Herbert" loading="lazy" />
+        <img src={herbertImg} alt="Sensei Patrick Herbert" loading="lazy" />
         <figcaption>Sensei Patrick Herbert<br/><small>Crédit photo : Mugica Bernard</small></figcaption>
       </figure>
     </div>

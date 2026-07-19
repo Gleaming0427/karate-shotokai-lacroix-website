@@ -1,5 +1,7 @@
 ---
-// Iaijutsu.astro
+const b = import.meta.env.BASE_URL;
+const base = b === "/" ? "" : b;
+const kataImg = `${base}/images/iaijutsu-kata.jpg`;
 ---
 
 <section class="section" id="iaijutsu">
@@ -17,7 +19,7 @@
     </div>
 
     <figure class="figure">
-      <img src="/images/iaijutsu-kata.jpg" alt="Pratique d'un kata" loading="lazy" />
+      <img src={kataImg} alt="Pratique d'un kata" loading="lazy" />
       <figcaption>Pratique d'un kata</figcaption>
     </figure>
   </div>

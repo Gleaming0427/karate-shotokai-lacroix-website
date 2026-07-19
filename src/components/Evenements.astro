@@ -27,7 +27,7 @@ const serignanImg = `${base}/images/serignan-2026.jpg`;
 <div class="modal-overlay" id="modal-overlay">
   <div class="modal-content">
     <button class="modal-close" id="modal-close">&times;</button>
-    <img src={serignanImg} alt="Stage Sérignan 2026" id="modal-img" />
+    <img data-src={serignanImg} alt="Stage Sérignan 2026" id="modal-img" />
   </div>
 </div>
 
@@ -35,8 +35,10 @@ const serignanImg = `${base}/images/serignan-2026.jpg`;
   const overlay = document.getElementById('modal-overlay')!;
   const card = document.getElementById('event-serignan');
   const close = document.getElementById('modal-close')!;
+  const modalImg = document.getElementById('modal-img') as HTMLImageElement;
 
   card?.addEventListener('click', () => {
+    modalImg.src = modalImg.dataset.src || '';
     overlay.classList.add('open');
     document.body.style.overflow = 'hidden';
   });

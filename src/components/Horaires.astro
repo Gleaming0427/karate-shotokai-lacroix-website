@@ -44,8 +44,11 @@
     <p class="schedule-note">Les tarifs ne prennent pas en compte la cotisation à l'association KDSE ainsi que l'inscription à la FEKAMT.</p>
 
     <div class="location-grid">
-      <div class="location-map">
-        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=1.4070%2C43.4990%2C1.4230%2C43.5090&amp;layer=mapnik&amp;marker=43.5042%2C1.4165" title="Carte — Dojo de Lacroix-Falgarde" loading="lazy" width="400" height="300"></iframe>
+      <div class="location-map" id="map-container">
+        <button class="map-load-btn" id="map-load-btn" aria-label="Charger la carte">
+          <span>&#128205;</span>
+          <span>Voir la carte</span>
+        </button>
       </div>
       <div class="location-info">
         <h3>Dojo Lacroix-Falgarde</h3>
@@ -58,3 +61,20 @@
     </div>
   </div>
 </section>
+
+<script>
+  const mapBtn = document.getElementById('map-load-btn');
+  const mapContainer = document.getElementById('map-container');
+  mapBtn?.addEventListener('click', () => {
+    const iframe = document.createElement('iframe');
+    iframe.src = 'https://www.openstreetmap.org/export/embed.html?bbox=1.4070%2C43.4990%2C1.4230%2C43.5090&layer=mapnik&marker=43.5042%2C1.4165';
+    iframe.title = 'Carte — Dojo de Lacroix-Falgarde';
+    iframe.width = '400';
+    iframe.height = '300';
+    iframe.style.border = 'none';
+    iframe.style.width = '100%';
+    iframe.style.height = '100%';
+    mapContainer!.innerHTML = '';
+    mapContainer!.appendChild(iframe);
+  });
+</script>

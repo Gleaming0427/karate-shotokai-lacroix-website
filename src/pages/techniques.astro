@@ -1,0 +1,50 @@
+---
+// techniques.astro — Page Techniques
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>Techniques — Karaté Shotokaï & Iaijutsu</title>
+    <meta name="description" content="Techniques de Karaté-do Shotokaï et Iaijutsu — Lacroix-Falgarde." />
+    <link rel="canonical" href="https://shotokailacroixfalgarde.fr/techniques/" />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:title" content="Techniques — Karaté Shotokaï & Iaijutsu" />
+    <meta property="og:description" content="Techniques de Karaté-do Shotokaï et Iaijutsu." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://shotokailacroixfalgarde.fr/techniques/" />
+    <meta property="og:locale" content="fr_FR" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Techniques — Karaté Shotokaï & Iaijutsu" />
+  </head>
+
+  <body style="display: flex; flex-direction: column; min-height: 100vh;">
+    <a href="#main" class="skip-link">Aller au contenu</a>
+    <Header />
+    <main id="main" style="flex: 1; display: flex; align-items: center; justify-content: center;">
+      <section class="section" style="text-align: center;">
+        <div class="container">
+          <div class="prose">
+            <h1 class="section-title" style="text-transform: none; letter-spacing: 0.04em;">Techniques</h1>
+            <p style="text-align: center; font-size: clamp(1rem, 2vw, 1.2rem); color: var(--color-text-soft);">
+              À venir prochainement.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>

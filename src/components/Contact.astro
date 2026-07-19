@@ -38,24 +38,25 @@
         </div>
       </div>
 
-      <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+      <form class="contact-form" id="contact-form" method="POST">
         <input type="hidden" name="access_key" value="49ff0c07-693f-4d33-9b3b-2b110c393ea4" />
-        <input type="hidden" name="redirect" value="#form-success" />
         <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off" />
 
-        <label class="sr-only" for="nom">Nom</label>
-        <input type="text" name="nom" id="nom" placeholder="Nom" required />
+        <div class="form-fields" id="form-fields">
+          <label class="sr-only" for="nom">Nom</label>
+          <input type="text" name="nom" id="nom" placeholder="Nom" required />
 
-        <label class="sr-only" for="email">Adresse e-mail</label>
-        <input type="email" name="email" id="email" placeholder="Adresse e-mail" required />
+          <label class="sr-only" for="email">Adresse e-mail</label>
+          <input type="email" name="email" id="email" placeholder="Adresse e-mail" required />
 
-        <label class="sr-only" for="telephone">Téléphone</label>
-        <input type="tel" name="telephone" id="telephone" placeholder="Téléphone" />
+          <label class="sr-only" for="telephone">Téléphone</label>
+          <input type="tel" name="telephone" id="telephone" placeholder="Téléphone" />
 
-        <label class="sr-only" for="message">Message</label>
-        <textarea name="message" id="message" placeholder="Message" required></textarea>
+          <label class="sr-only" for="message">Message</label>
+          <textarea name="message" id="message" placeholder="Message" required></textarea>
 
-        <button type="submit" class="btn">Envoyer</button>
+          <button type="submit" class="btn">Envoyer</button>
+        </div>
 
         <div class="form-success" id="form-success">
           &#10003; Message envoyé&nbsp;! Nous vous répondrons dans les meilleurs délais.
@@ -66,10 +67,24 @@
 </section>
 
 <script>
-  // Affiche le message de succès si le hash est présent
-  if (window.location.hash === '#form-success') {
-    const msg = document.getElementById('form-success');
-    if (msg) msg.style.display = 'block';
-    history.replaceState(null, '', window.location.pathname);
-  }
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  const fields = document.getElementById('form-fields')!;
+  const msg = document.getElementById('form-success')!;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: data,
+      });
+      if (res.ok) {
+        fields.style.display = 'none';
+        msg.style.display = 'block';
+      }
+    } catch {
+      alert('Erreur d\'envoi. Veuillez réessayer.');
+    }
+  });
 </script>

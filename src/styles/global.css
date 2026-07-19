@@ -167,9 +167,6 @@ a:hover { color: var(--color-accent-hover); }
   outline: 2px solid var(--color-accent); outline-offset: 6px;
 }
 
-/* Accélère le rendu des sections hors écran */
-.section { content-visibility: auto; contain-intrinsic-size: 500px; }
-
 .hero h1 {
   font-size: clamp(1.8rem, 5vw, 3.4rem); font-weight: 800;
   color: #fff; text-transform: uppercase; letter-spacing: .05em;
@@ -527,13 +524,13 @@ a:hover { color: var(--color-accent-hover); }
 @media (prefers-color-scheme: dark) {
   :root {
     --color-bg: #1a1a1e;
-    --color-bg-alt: #222228;
+    --color-bg-alt: #262630;
     --color-text: #e4e4e8;
     --color-text-soft: #aaaab2;
     --color-text-muted: #7e7e88;
     --color-border: #33333a;
   }
-  .section-alt { background: linear-gradient(175deg, #1a1a20 0%, #1e1e24 100%); }
+  .section-alt { background: #25252d; }
   .site-header { background: rgba(18,18,22,.78); border-bottom-color: rgba(255,255,255,.06); }
   .event-card { background: #222228; }
   .schedule-table { background: #222228; }

@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: Gleaming0427/karate-shotokai-lacroix-website
+  branch: main
+
+media_folder: "public/images/articles"
+public_folder: "/images/articles"
+
+collections:
+  - name: "techniques"
+    label: "Techniques"
+    label_singular: "Article technique"
+    folder: "src/content/techniques"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Date de publication", name: "date", widget: "datetime" }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Contenu", name: "body", widget: "markdown" }

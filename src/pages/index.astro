@@ -110,13 +110,15 @@ import '../styles/global.css';
         const scrollToAnchor = () => {
           const el = document.getElementById(id);
           if (el) {
-            el.scrollIntoView({ behavior: 'smooth' });
+            el.scrollIntoView({ behavior: 'instant', block: 'start' });
+            return true;
           }
+          return false;
         };
-        // Premier essai après chargement
-        window.addEventListener('load', scrollToAnchor);
-        // Deuxième essai après un délai (images lazy)
-        setTimeout(scrollToAnchor, 800);
+        // Essaie plusieurs fois pour compenser le lazy loading
+        [100, 300, 600, 1000, 1500, 2500].forEach(ms => {
+          setTimeout(() => scrollToAnchor(), ms);
+        });
       }
     </script>
   </body>

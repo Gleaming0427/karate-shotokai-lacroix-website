@@ -65,6 +65,6 @@ articles.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
       </section>
     </main>
     <Footer />
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <Fragment set:html={`<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"><\/script><script>if(window.netlifyIdentity){window.netlifyIdentity.on("init",function(u){if(!u){window.netlifyIdentity.on("login",function(){document.location.href="/admin/";});}});window.netlifyIdentity.init();}<\/script>`} />
   </body>
 </html>

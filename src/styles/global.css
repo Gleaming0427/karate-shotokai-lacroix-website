@@ -111,7 +111,7 @@ a:hover { color: var(--color-accent-hover); }
 
 .header-logo-img {
   width: 42px; height: 42px; border-radius: 50%;
-  background-image: url('/images/logo.jpg');
+  background-image: url('/images/logo.webp');
   background-size: cover; background-position: center;
   outline: 1.5px solid var(--color-accent); outline-offset: 2px; flex-shrink: 0;
 }
@@ -146,7 +146,7 @@ a:hover { color: var(--color-accent-hover); }
 .hero {
   position: relative; min-height: 100vh; min-height: 100dvh;
   display: flex; align-items: center; justify-content: center; text-align: center;
-  background: url('/images/hero-bg.jpg') center / cover no-repeat;
+  background: url('/images/hero-bg.webp') center / cover no-repeat;
   padding: clamp(4rem, 8vh, 7rem) clamp(1rem, 4vw, 2rem) clamp(3rem, 6vh, 5rem);
 }
 
@@ -160,7 +160,7 @@ a:hover { color: var(--color-accent-hover); }
 .hero-logo {
   width: clamp(120px, 22vw, 190px); height: clamp(120px, 22vw, 190px);
   aspect-ratio: 1; border-radius: 50%;
-  background-image: url('/images/logo.jpg');
+  background-image: url('/images/logo.webp');
   background-size: cover; background-position: center;
   margin: 0 auto clamp(1rem, 2vw, 1.8rem);
   box-shadow: 0 4px 24px rgba(0,0,0,.35);
@@ -434,6 +434,16 @@ a:hover { color: var(--color-accent-hover); }
 /* ── Page interne ── */
 .page-inner { display: flex; flex-direction: column; min-height: 100vh; }
 .page-inner > main { flex: 1; }
+
+/* ── Grille articles ── */
+.articles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 0 auto; }
+.article-card { background: var(--color-bg); border: 1px solid var(--color-border); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); transition: all var(--transition); }
+.article-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.article-card img { width: 100%; height: 200px; object-fit: cover; }
+.article-card-body { padding: 1.3rem; }
+.article-card-body time { font-size: .78rem; color: var(--color-accent); font-weight: 600; }
+.article-card-body h2 { font-size: 1.1rem; margin: .35rem 0; }
+.article-card-body p { font-size: .9rem; color: var(--color-text-soft); line-height: 1.6; }
 
 /* ── Footer ── */
 .site-footer {

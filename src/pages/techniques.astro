@@ -4,6 +4,10 @@ const base = b === "/" ? "" : b;
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
+import { getCollection } from 'astro:content';
+
+const articles = await getCollection('techniques');
+articles.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 ---
 
 <!doctype html>
@@ -35,10 +39,30 @@ import '../styles/global.css';
     <a href="#main" class="skip-link">Aller au contenu</a>
     <Header />
     <main id="main">
-      <section class="section" style="padding-top: 8rem; min-height: 70vh; display: flex; align-items: center; justify-content: center; text-align: center;">
+      <section class="section" style="padding-top: 6rem;">
         <div class="container">
           <h1 class="section-title" style="text-transform: none; letter-spacing: 0.04em;">Techniques</h1>
-          <p style="color: var(--color-text-soft);">À venir prochainement.</p>
+
+          {articles.length === 0 ? (
+            <p style="text-align: center; color: var(--color-text-soft);">À venir prochainement.</p>
+          ) : (
+            <div class="articles-grid">
+              {articles.map(article => (
+                <article class="article-card">
+                  {article.data.image && (
+                    <img src={article.data.image} alt={article.data.title} loading="lazy" />
+                  )}
+                  <div class="article-card-body">
+                    <time datetime={article.data.date.toISOString().split('T')[0]}>
+                      {article.data.date.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}
+                    </time>
+                    <h2>{article.data.title}</h2>
+                    <p>{article.body.substring(0, 150)}...</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          )}
         </div>
       </section>
     </main>

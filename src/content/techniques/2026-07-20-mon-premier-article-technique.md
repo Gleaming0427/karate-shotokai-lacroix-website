@@ -1,5 +1,5 @@
 ---
-title: Mon premier article technique
+title: Techniques de karaté shotokaï
 date: 20/07/2026
 image: /images/articles/maitre-murakami_reduit__q54yrk.jpg
 ---

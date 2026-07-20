@@ -371,7 +371,7 @@ a:hover { color: var(--color-accent-hover); }
   max-width: 500px; width: 100%; max-height: 90vh; overflow-y: auto;
   box-shadow: var(--shadow-lg); position: relative;
 }
-.event-modal-card img { width: 100%; height: auto; display: block; border-radius: var(--radius) var(--radius) 0 0; }
+.event-modal-card img { width: 100%; max-height: 300px; object-fit: cover; display: block; border-radius: var(--radius) var(--radius) 0 0; }
 
 .event-modal-body { padding: 1.5rem; text-align: center; }
 .event-modal-body h3 { font-size: 1.2rem; margin: .5rem 0 .4rem; }
@@ -397,8 +397,8 @@ a:hover { color: var(--color-accent-hover); }
 
 .event-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: .3rem; }
 .event-card p { color: var(--color-text-soft); font-size: .88rem; line-height: 1.5; }
-.event-card-text { display: flex; align-items: center; justify-content: center; }
-.event-card-text .event-card-body { padding: 2rem 1.2rem; }
+.event-card:not(:has(img)) { display: flex; align-items: center; justify-content: center; min-height: 220px; }
+.event-card:not(:has(img)) .event-card-body { padding: 2rem 1.2rem; }
 
 /* ── Contact ── */
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; max-width: 820px; margin: 0 auto; }

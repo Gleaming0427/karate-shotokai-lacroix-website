@@ -6,7 +6,7 @@ image: /images/articles/maitre-murakami_reduit__q54yrk.jpg
 ## 
 Arrivé en France en 1957
 
-Arrivé en France en 1957 pour enseigner le karaté shotokan à Paris chez Henri Plée, maitre Tetsuji Murakami a fait évoluer progressivement sa pratique vers le shotokaï après sa rencontre avec maitre Egami en 1968. Il devient le représentant pour l’Europe du karaté shotokaï.
+Arrivé en France en 1957 pour enseigner le karaté shotokan à Paris chez Henri Plée, maitre Tetsuji Murakami a fait évoluer progressivement sa pratique vers le shotokaï après sa rencontre avec maitre Egami en 1968. Il devient le représentant pour l’Europe du karaté shotokaï..
 
  \
 <img src="/images/articles/images.jpeg" alt="" width="600" />

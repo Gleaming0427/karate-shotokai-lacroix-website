@@ -17,6 +17,6 @@ Tout au long de l'année, il dirige des stages dans ces pays et particulièremen
 
 A Paris il enseigne aux dojos de Boulogne et Mercœur. 
 
-En 1986, a lieu le voyage au japon, voyage où le maitre accompagné de ses élèves revient 29 ans après son arrivée en France. 
+En 1986, a lieu le voyage au japon, voyage où le maitre accompagné de ses élèves revient dans son pays natal 29 ans après son arrivée en France. 
 
 Peu après sa maladie étant déjà avancée, il sera hospitalisé et décédera au mois de janvier 1987.
